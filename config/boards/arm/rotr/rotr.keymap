@@ -27,7 +27,7 @@
 		one {
 			//F17 | F18 | F19
 			bindings = <&kp F17 &lt 4 F18 &kp F19>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;ß
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			//PURPLE
 			ledoverride;
             r = <128>;
