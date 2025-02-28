@@ -15,40 +15,35 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 F13 &kp C_PP>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-		};
-		one {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_PREV &lt 4 C_PP &kp C_NEXT>;
+			//PREV | PLAY/PAUSE | NEXT | WHITE
+			bindings = <&kp C_PREV &lt 3 C_PP &kp C_NEXT>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <255>;
 			g = <255>;
 			b = <255>;
-
 		};
-		two {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp LEFT &lt 4 SPACE &kp RIGHT>;
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+		one {
+			//L CMD + L CTRL
+			//F17 | F18 | F19 | PURPLE
+			bindings = <&kp LG(LC(F17)) &lt 3 LG(LC(F18)) &kp LG(LC(F19))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
 			r = <128>;
 			g = <0>;
 			b = <128>;
-
 		};
-		three {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 F13 &kp C_PP>;
+		two {
+			//L CMD + L CTRL | R OPT
+			//F17 | F18 | F19 | GREEN
+			bindings = <&kp LG(LC(RA(F17))) &lt 3 LG(LC(RA(F18))) &kp LG(LC(RA(F19)))>;
+			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
 			ledoverride;
 			r = <0>;
 			g = <128>;
 			b = <0>;
 		};
 		shift {
-			//PREV | PLAY/PAUSE | NEXT
 			bindings = <&bt BT_CLR &trans &rgb_ug RGB_TOG>;
 			sensor-bindings = <&def_lshft>;
 		};
